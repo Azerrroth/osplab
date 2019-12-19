@@ -1,0 +1,247 @@
+
+Try get buffer  Producer:0      Time:0.000s
+Try get buffer  Producer:0      Time:0.000s
+Get the buffer  Producer:0      Time:0.000s
+0[ ]    1[ ]    2[ ]
+Produce an item0        Producer:0      Time:0.000s
+Put item0 in buffer2    Producer:0      Time:0.000s
+0[ ]    1[ ]    2[x]
+Leave the buffer        Producer:0      Time:0.000s
+
+Try get buffer  Producer:1      Time:0.001s
+Try get buffer  Producer:1      Time:0.001s
+Get the buffer  Producer:1      Time:0.001s
+0[ ]    1[ ]    2[x]
+Produce an item1        Producer:1      Time:0.001s
+Put item1 in buffer1    Producer:1      Time:0.001s
+0[ ]    1[x]    2[x]
+Leave the buffer        Producer:1      Time:0.001s
+
+Try get buffer  Producer:2      Time:0.001s
+Try get buffer  Producer:2      Time:0.001s
+Get the buffer  Producer:2      Time:0.001s
+0[ ]    1[x]    2[x]
+Produce an item2        Producer:2      Time:0.001s
+Put item2 in buffer0    Producer:2      Time:0.001s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:2      Time:0.001s
+
+Try get buffer  Consumer:0      Time:0.003s
+Get the buffer  Consumer:0      Time:0.003s
+0[x]    1[x]    2[x]
+Consume an item0        Consumer:0      Time:0.003s
+Delete item0 from buffer2       Consumer:0      Time:0.003s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:0      Time:0.003s
+
+Try get buffer  Producer:3      Time:0.004s
+Get the buffer  Producer:3      Time:0.004s
+0[x]    1[x]    2[ ]
+Produce an item3        Producer:3      Time:0.004s
+Put item3 in buffer2    Producer:3      Time:0.004s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:3      Time:0.004s
+
+Try get buffer  Consumer:2      Time:0.004s
+Get the buffer  Consumer:2      Time:0.004s
+0[x]    1[x]    2[x]
+Consume an item3        Consumer:2      Time:0.004s
+Delete item3 from buffer2       Consumer:2      Time:0.004s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:2      Time:0.004s
+
+Try get buffer  Producer:4      Time:0.004s
+Get the buffer  Producer:4      Time:0.004s
+0[x]    1[x]    2[ ]
+Produce an item4        Producer:4      Time:0.004s
+Put item4 in buffer2    Producer:4      Time:0.004s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:4      Time:0.004s
+
+Try get buffer  Consumer:1      Time:0.004s
+Get the buffer  Consumer:1      Time:0.004s
+0[x]    1[x]    2[x]
+Consume an item4        Consumer:1      Time:0.004s
+Delete item4 from buffer2       Consumer:1      Time:0.004s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:1      Time:0.004s
+
+Try get buffer  Consumer:3      Time:0.005s
+Get the buffer  Consumer:3      Time:0.005s
+0[x]    1[x]    2[ ]
+Consume an item1        Consumer:3      Time:0.005s
+Delete item1 from buffer1       Consumer:3      Time:0.005s
+0[x]    1[ ]    2[ ]
+Leave the buffer        Consumer:3      Time:0.005s
+
+Try get buffer  Producer:0      Time:1.000s
+Try get buffer  Producer:0      Time:1.000s
+Get the buffer  Producer:0      Time:1.000s
+0[x]    1[ ]    2[ ]
+Produce an item5        Producer:0      Time:1.000s
+Put item5 in buffer2    Producer:0      Time:1.000s
+0[x]    1[ ]    2[x]
+Leave the buffer        Producer:0      Time:1.000s
+
+Try get buffer  Producer:4      Time:1.004s
+Try get buffer  Producer:4      Time:1.004s
+Get the buffer  Producer:4      Time:1.004s
+0[x]    1[ ]    2[x]
+Produce an item6        Producer:4      Time:1.004s
+Put item6 in buffer1    Producer:4      Time:1.004s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:4      Time:1.004s
+
+Try get buffer  Consumer:0      Time:2.004s
+Get the buffer  Consumer:0      Time:2.004s
+0[x]    1[x]    2[x]
+Consume an item5        Consumer:0      Time:2.004s
+Delete item5 from buffer2       Consumer:0      Time:2.004s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:0      Time:2.004s
+
+Try get buffer  Producer:2      Time:2.004s
+Get the buffer  Producer:2      Time:2.004s
+0[x]    1[x]    2[ ]
+Produce an item7        Producer:2      Time:2.004s
+Put item7 in buffer2    Producer:2      Time:2.004s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:2      Time:2.004s
+
+Try get buffer  Consumer:3      Time:2.005s
+Get the buffer  Consumer:3      Time:2.005s
+0[x]    1[x]    2[x]
+Consume an item7        Consumer:3      Time:2.005s
+Delete item7 from buffer2       Consumer:3      Time:2.005s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:3      Time:2.005s
+
+Try get buffer  Producer:3      Time:2.005s
+Get the buffer  Producer:3      Time:2.006s
+0[x]    1[x]    2[ ]
+Produce an item8        Producer:3      Time:2.006s
+Put item8 in buffer2    Producer:3      Time:2.006s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:3      Time:2.006s
+
+Try get buffer  Consumer:1      Time:3.004s
+Get the buffer  Consumer:1      Time:3.005s
+0[x]    1[x]    2[x]
+Consume an item8        Consumer:1      Time:3.005s
+Delete item8 from buffer2       Consumer:1      Time:3.005s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:1      Time:3.005s
+
+Try get buffer  Producer:1      Time:3.005s
+Get the buffer  Producer:1      Time:3.005s
+0[x]    1[x]    2[ ]
+Produce an item9        Producer:1      Time:3.005s
+Put item9 in buffer2    Producer:1      Time:3.005s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:1      Time:3.005s
+
+Try get buffer  Consumer:2      Time:4.005s
+Get the buffer  Consumer:2      Time:4.005s
+0[x]    1[x]    2[x]
+Consume an item9        Consumer:2      Time:4.005s
+Delete item9 from buffer2       Consumer:2      Time:4.005s
+0[x]    1[x]    2[ ]
+Try get buffer  Consumer:0      Time:4.005s
+Leave the buffer        Consumer:2      Time:4.005s
+
+Get the buffer  Consumer:0      Time:4.005s
+0[x]    1[x]    2[ ]
+Consume an item6        Consumer:0      Time:4.005s
+Delete item6 from buffer1       Consumer:0      Time:4.005s
+0[x]    1[ ]    2[ ]
+Leave the buffer        Consumer:0      Time:4.005s
+
+Try get buffer  Producer:3      Time:4.005s
+Get the buffer  Producer:3      Time:4.005s
+0[x]    1[ ]    2[ ]
+Produce an item10       Producer:3      Time:4.005s
+Put item10 in buffer2   Producer:3      Time:4.005s
+0[x]    1[ ]    2[x]
+Leave the buffer        Producer:3      Time:4.005s
+
+Try get buffer  Producer:0      Time:4.005s
+Get the buffer  Producer:0      Time:4.005s
+0[x]    1[ ]    2[x]
+Produce an item11       Producer:0      Time:4.005s
+Put item11 in buffer1   Producer:0      Time:4.005s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:0      Time:4.005s
+
+Try get buffer  Consumer:3      Time:4.006s
+Get the buffer  Consumer:3      Time:4.006s
+0[x]    1[x]    2[x]
+Consume an item10       Consumer:3      Time:4.006s
+Delete item10 from buffer2      Consumer:3      Time:4.006s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:3      Time:4.006s
+
+Try get buffer  Producer:2      Time:5.004s
+Try get buffer  Producer:2      Time:5.004s
+Get the buffer  Producer:2      Time:5.004s
+0[x]    1[x]    2[ ]
+Produce an item12       Producer:2      Time:5.004s
+Put item12 in buffer2   Producer:2      Time:5.004s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:2      Time:5.004s
+
+Try get buffer  Consumer:2      Time:5.005s
+Get the buffer  Consumer:2      Time:5.005s
+0[x]    1[x]    2[x]
+Consume an item12       Consumer:2      Time:5.005s
+Delete item12 from buffer2      Consumer:2      Time:5.005s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:2      Time:5.005s
+
+Try get buffer  Producer:4      Time:5.005s
+Get the buffer  Producer:4      Time:5.005s
+0[x]    1[x]    2[ ]
+Produce an item13       Producer:4      Time:5.005s
+Put item13 in buffer2   Producer:4      Time:5.005s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:4      Time:5.005s
+
+Try get buffer  Consumer:3      Time:5.006s
+Get the buffer  Consumer:3      Time:5.007s
+0[x]    1[x]    2[x]
+Consume an item13       Consumer:3      Time:5.007s
+Delete item13 from buffer2      Consumer:3      Time:5.007s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:3      Time:5.007s
+
+Try get buffer  Producer:1      Time:6.005s
+Try get buffer  Producer:1      Time:6.005s
+Get the buffer  Producer:1      Time:6.005s
+0[x]    1[x]    2[ ]
+Produce an item14       Producer:1      Time:6.005s
+Put item14 in buffer2   Producer:1      Time:6.005s
+0[x]    1[x]    2[x]
+Leave the buffer        Producer:1      Time:6.005s
+
+Try get buffer  Consumer:1      Time:6.005s
+Get the buffer  Consumer:1      Time:6.005s
+0[x]    1[x]    2[x]
+Consume an item14       Consumer:1      Time:6.005s
+Delete item14 from buffer2      Consumer:1      Time:6.005s
+0[x]    1[x]    2[ ]
+Leave the buffer        Consumer:1      Time:6.005s
+
+Try get buffer  Consumer:0      Time:6.005s
+Get the buffer  Consumer:0      Time:6.006s
+0[x]    1[x]    2[ ]
+Consume an item11       Consumer:0      Time:6.006s
+Delete item11 from buffer1      Consumer:0      Time:6.006s
+0[x]    1[ ]    2[ ]
+Leave the buffer        Consumer:0      Time:6.006s
+
+Try get buffer  Consumer:3      Time:6.007s
+Get the buffer  Consumer:3      Time:6.007s
+0[x]    1[ ]    2[ ]
+Consume an item2        Consumer:3      Time:6.007s
+Delete item2 from buffer0       Consumer:3      Time:6.007s
+0[ ]    1[ ]    2[ ]
+Leave the buffer        Consumer:3      Time:6.007s

@@ -1,0 +1,3 @@
+/home/a/CLionProjects/ProAndCon/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/a/CLionProjects/ProAndCon/cmake-build-debug/CMakeFiles/ProAndCon.dir
+/home/a/CLionProjects/ProAndCon/cmake-build-debug/CMakeFiles/edit_cache.dir
