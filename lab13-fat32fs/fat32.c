@@ -9,19 +9,12 @@
 #include <signal.h>
 #include <stdint.h>
 #include <ctype.h>
-#define WHITESPACE " \t\n" // We want to split our command line up into tokens \
-						   // so we need to define what delimits our tokens.   \
-						   // In this case  white space                        \
-						   // will separate the tokens on our command line
-
+#define WHITESPACE " \t\n"
 #define MAX_COMMAND_SIZE 255 // The maximum command-line size
 
 #define MAX_NUM_ARGUMENTS 10
 #define DIR_SIZE 16
-// Function: Filename Comparison
-// Purpose: Modify user-inputted filename to see it matches the corresponding filename stored in the directory entry.
-// 	    Subdirectories are considered to be files, and thus will work with this function.
-// Returns: 0 if match, -1 if no match
+// Compare tow file name, if files are the same, return 0, else return -1.
 int fcmp(char *uname, char *dname)
 {
 	int i;
@@ -59,19 +52,16 @@ int fcmp(char *uname, char *dname)
 
 	else if (dotIndex != -1)
 	{
-
 		// Copy every value from uname to cname up to the '.' character.
 		for (i = 0; i < dotIndex; i++)
 		{
 			cname[i] = uname[i];
 		}
-
 		// If applicable, append spaces so that the format is similar to the directory entry's name.
 		for (; i < 8; i++)
 		{
 			cname[i] = ' ';
 		}
-
 		// Add the file extension in the last three indexes.
 		for (; i < 11; i++)
 		{
@@ -81,44 +71,28 @@ int fcmp(char *uname, char *dname)
 				cname[i] = uname[(dotIndex + 1) + (i - 8)];
 		}
 	}
-
 	//Check to see if 'uname' is a directory
 	else
 	{
-		// Copy every value from uname to cname until there are no more characters in uname.
-		// Note that we do not wish to copy the null-terminator.
 		for (i = 0; i < (ulen - 1); i++)
 		{
 			cname[i] = uname[i];
 		}
-
-		// If applicable, append spaces to cname so that the format is similar to the directory entry's name.
 		for (; i < 11; i++)
 		{
 			cname[i] = ' ';
 		}
 		cname[11] = '\0';
 	}
-	// printf("cname: %s \t dname:%s \t dotIndex:%d \t ulen:%d \n ", cname, dname, dotIndex, ulen);
-
-	// DEBUG printf("Cname: %s \tDname: %s \tUlen: %d \tClen: %d \tDlen: %d \n", cname, dname, ulen, strlen(cname), strlen(dname));
 	if (strcmp(cname, dname) == 0)
 	{
-		// printf("FILE FOUND: %s\n", cname);
 		return 0;
 	}
 
 	return -1;
 }
 
-// Function: Recursive Read
-// Purpose: Read the data from a file in chunks. Grants ability to read bytes from multiple clusters.
-// Returns: void
-// NOTE: How to ensure that we stay at same pointer.
-
-// arg2 and arg3 acts as a 'bytes-left' counter
-// arg2 will be 0 once the beginning position has been found.
-// arg3 will be 0 once the last character has been read.
+// Recursive Read file, read data from a file
 void rread(FILE *fp, int rootStart, long arg2, long arg3, int currClusNum, int numOfClusters)
 {
 	int i;
@@ -132,8 +106,6 @@ void rread(FILE *fp, int rootStart, long arg2, long arg3, int currClusNum, int n
 		rread(fp, rootStart, arg2 - 512, arg3, currClusNum, numOfClusters + 1);
 		return;
 	}
-
-	// Then go to that particular cluster
 	else
 	{
 		for (int i = 0; i < numOfClusters; i++)
@@ -147,8 +119,6 @@ void rread(FILE *fp, int rootStart, long arg2, long arg3, int currClusNum, int n
 				currClusNum = tmp;
 			}
 		}
-
-		// Fseek to the data for that cluster
 		fseek(fp, rootStart + (currClusNum * 512) + arg2 - 1024, SEEK_SET);
 		if (arg3 <= 512)
 		{
